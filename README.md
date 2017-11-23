@@ -12,3 +12,12 @@ Task_1
 	
 3. Networking for Web Developers
 	![Screenshot](task_01/networking-for-web-developers_done.png)
+
+Task_2
+	
+1. What is Version Control
+	![Screenshot](task_02/what-is-version-control_done.png)
+	
+2. GitHub & Collaboration
+	![Screenshot](task_02/GitHub-and-Collaboration_done.png)
+	
