@@ -21,3 +21,7 @@ Task_2
 2. GitHub & Collaboration
 	![Screenshot](task_02/GitHub-and-Collaboration_done.png)
 	
+Task_3
+	
+1. Intro to HTML & CSS
+	![Screenshot](task_03/Intro-to-HTML-and-CSS_done.png)
