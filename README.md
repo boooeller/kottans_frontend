@@ -25,3 +25,8 @@ Task_3
 	
 1. Intro to HTML & CSS
 	![Screenshot](task_03/Intro-to-HTML-and-CSS_done.png)
+	
+Task_4
+	
+1. Responsive Web Design Fundamentals
+	![Screenshot](task_04/Responsive-Web-Design-Fundamentals_done.png)
