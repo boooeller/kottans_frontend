@@ -30,3 +30,8 @@ Task_4
 	
 1. Responsive Web Design Fundamentals
 	![Screenshot](task_04/Responsive-Web-Design-Fundamentals_done.png)
+
+Task_5
+	
+1. Intro to JS
+	![Screenshot](task_05/Intro-to-JS_done.png)	
