@@ -35,3 +35,11 @@ Task_5
 	
 1. Intro to JS
 	![Screenshot](task_05/Intro-to-JS_done.png)	
+	
+Task_6
+	
+1. Object Oriented JS
+	![Screenshot](task_06/Object-Oriented-JS_done.png)	
+		
+	
+	
