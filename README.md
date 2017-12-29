@@ -41,5 +41,8 @@ Task_6
 1. Object Oriented JS
 	![Screenshot](task_06/Object-Oriented-JS_done.png)	
 		
+Task_7
 	
+1. Offline Web Applications
+	![Screenshot](task_07/Offline-Web-Applications_done.png)
 	
