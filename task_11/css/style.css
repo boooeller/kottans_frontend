@@ -221,7 +221,7 @@ ul.order-captions ul > li {
 	width: 256px;
 	height: 184px;
 	z-index: 1;
-	border: 1px solid #C9D0E1;
+	border: 5px solid transparent;
 	background: #F7F7FA;
 	border-radius: 5px;
 	
@@ -240,11 +240,11 @@ ul.order-captions ul > li {
     color: #77a;
 }
 
-input[name=var]:checked + .select-wrapper {
+input[name=var]:checked + .border-block .select-wrapper {
 	border: 5px solid #8be;
 }
 
-input[name=var]:checked + .select-wrapper:after {
+input[name=var]:checked + .border-block .select-wrapper:after {
     font-family: 'FontAwesome';
     content: "\f058";
     position: absolute;
@@ -260,4 +260,9 @@ input[name=var]:checked + .select-wrapper:after {
 label.select-type {
     display: inline-block;
 	margin-left: 20px;
+}
+
+.border-block {
+	border: 1px solid #C9D0E1;
+    border-radius: 5px;
 }
