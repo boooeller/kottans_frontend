@@ -1,0 +1,263 @@
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+body {
+	background: #000;
+	font-family: 'Roboto', sans-serif;
+}
+
+.wrapper {
+	margin: 15px auto;
+	width: 1310px;
+	height: 1000px;
+	background: #eceef4;
+}
+
+.container {
+	margin: 0 auto;
+	width: 1036px;
+	
+}
+
+header {
+	position: relative;
+	padding: 15px 40px;
+	text-align: center;
+}
+
+.backward { 
+    position: absolute;
+	top: 30%;
+    left: 0;
+	float: left;
+	padding: 15px 33px;
+	border: 1px solid #C9D0E1;
+	border-radius: 5px;
+	background: transparent;
+	text-transform: uppercase;
+	font-family: 'Roboto', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    color: #A5ABC5;
+}
+
+.backward p > i {
+	margin-right: 15px;
+}
+
+.login {
+	position: absolute;
+	top: 30%;
+    right: 0;
+	float: right;
+	padding: 15px 31px;
+	border: 1px solid #C9D0E1;
+	border-radius: 5px;
+	background: transparent;
+	text-transform: uppercase;
+	font-family: 'Roboto', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    color: #A5ABC5;
+}
+
+.login p > i {
+	margin-right: 15px;
+}
+
+main {
+	height: 700px;
+	border: 1px solid #C9D0E1;
+	border-radius: 5px;
+	background: #fff;
+}
+
+.order-help-wrapper {
+	width: 100%;
+	border-bottom: 2px solid #C9D0E1;
+}
+
+.order-wrapper {
+	width: 63%;
+	float: left;
+	padding: 20px 30px 20px 35px;
+	border-right: 2px solid #C9D0E1;
+	
+	
+}
+
+.help-wrapper {
+	width: 23%;
+	padding: 12px 44px 9px 30px;
+	float: right;
+}
+
+.order-info h3, .help-wrapper h3 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #77a;
+    letter-spacing: 1px;
+}
+
+.order-info h3 i {
+	font-size: 20px;
+    margin: 5px 5px 0 0;
+}
+
+.order-captions {
+	margin: 25px 0 0 33px;
+}
+
+.order-captions li {
+	display: inline-block;
+	margin-right: 20px;
+	font-family: 'Roboto', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+	text-transform: uppercase;
+	color: #77a;
+	
+}
+
+ul.order-captions ul > li {
+	margin-top: 10px;
+	text-transform: none;
+	font-weight: 400;
+	color: #abc;
+}
+
+.order-info {
+	float: left;
+}
+
+.order-buttons {
+	width: 154px;
+	float: right;
+}
+
+.order-buttons button {
+	width: 154px;
+	height: 47px;
+	border: 1px solid #C9D0E1;
+	border-radius: 5px;
+	background: #f7f7fa;
+	cursor: pointer;
+}
+
+.order-buttons .place-order-button {
+	margin-bottom: 10px;
+	background: #5FCAC6
+	
+	
+}
+
+
+.order-buttons button p {
+	font-family: 'Roboto', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+	text-transform: uppercase;
+	color: #fff;
+}
+
+.order-buttons .print-button p {
+	color: #abc;
+}
+
+.help-wrapper h3 i {
+	font-size: 20px;
+    margin: 5px 5px 0 0;
+}
+
+.help-wrapper p {
+	margin: 15px 0 15px 30px;
+	font-family: 'Roboto', sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+	color: #abc;
+}
+
+.help-wrapper address {
+	margin-left: 30px;
+}
+
+.help-wrapper address a {
+	font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+	font-weight: 500;
+  	color: #77a;
+	text-decoration: none;
+}
+
+.help-wrapper address a:first-child {
+	margin-right: 10px;
+}
+
+.translate-wrapper {
+    text-align: center;
+    margin-top: 90px;
+}
+
+.translate-wrapper h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 23px;
+    font-weight: 500;
+    color: #77a;
+    margin: 0 auto 65px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: 2px solid #C9D0E1;
+    padding-bottom: 10px;
+    width: 528px;
+}
+
+.select-wrapper {
+	position: relative;
+	width: 256px;
+	height: 184px;
+	z-index: 1;
+	border: 1px solid #C9D0E1;
+	background: #F7F7FA;
+	border-radius: 5px;
+	
+}
+
+
+.select-wrapper img {
+	margin-top: 20px;
+}
+
+.select-wrapper p {
+	margin-top: 15px;
+	font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #77a;
+}
+
+input[name=var]:checked + .select-wrapper {
+	border: 5px solid #8be;
+}
+
+input[name=var]:checked + .select-wrapper:after {
+    font-family: 'FontAwesome';
+    content: "\f058";
+    position: absolute;
+    top: -8px;
+    left: 247px;
+    color: #8be;
+    font-size: 29px;
+    z-index: 2;
+    background-color: #fff;
+    line-height: 10px;
+}
+
+label.select-type {
+    display: inline-block;
+	margin-left: 20px;
+}
