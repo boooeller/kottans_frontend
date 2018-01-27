@@ -5,6 +5,11 @@
 		<title>Task-11</title>
 		<link rel="stylesheet" href="css/reset.css">
 		<link rel="stylesheet" href="css/style.css">
+		<!--<link rel="stylesheet" type="text/css" href="css/normalize.css" />-->
+		<link rel="stylesheet" type="text/css" href="css/vicons-font.css" />
+		<!--<link rel="stylesheet" type="text/css" href="css/base.css" />-->
+		<link rel="stylesheet" type="text/css" href="css/buttons.css" />
+		
 		<link href="https://cdn.dribbble.com/assets/favicon-63b2904a073c89b52b19aa08cebc16a154bcf83fee8ecc6439968b1e6db569c7.ico" rel="icon">
 		<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
 		<script src="https://use.fontawesome.com/15a4f15d9a.js"></script>
@@ -16,7 +21,7 @@
 					<button class="backward">
 						<p><i class="fa fa-long-arrow-left" aria-hidden="true"></i>go back</p>
 					</button>
-					<img src="img/logo.png" alt="logo"/>
+					<a href="#" class="logo"><img src="img/logo.png" alt="logo"/></a>
 					<button class="login">
 						<p><i class="fa fa-user" aria-hidden="true"></i>sing in</p>
 					</button>
@@ -53,10 +58,10 @@
 								</ul>
 							</div>
 							<div class="order-buttons">
-								<button class="place-order-button">
+								<button class="place-order-button button button--wayra button--border-thick button--text-upper button--size-s" type="submit">
 									<p>place order</p>
 								</button>
-								<button class="print-button">
+								<button class="print-button button button--wayra button--border-thick button--text-upper button--size-s">
 									<p>print a quate</p>
 								</button>
 							</div>
@@ -73,12 +78,13 @@
 							</address>
 						</div>
 					</section>
+					<form>
 					<section class="translate-wrapper">
 						<h1>
 							<span>select what you want to translate</span>
 						</h1>
 						<label class="select-type">
-							<input required hidden type="radio" name="var" value="website"/>
+							<input required type="radio" name="var" value="website"/>
 							<div class="border-block">
 							<div class="select-wrapper">
 								<img src="img/website.png"/>
@@ -87,7 +93,7 @@
 							</div>
 						</label>
 						<label class="select-type">
-							<input required hidden type="radio" name="var" value="documents"/>
+							<input required type="radio" name="var" value="documents"/>
 							<div class="border-block">
 							<div class="select-wrapper">
 								<img src="img/documents.png"/>
@@ -96,7 +102,7 @@
 							</div>
 						</label>
 						<label class="select-type">
-							<input required hidden type="radio" name="var" value="social-account"/>
+							<input required type="radio" name="var" value="social-account"/>
 							<div class="border-block">
 							<div class="select-wrapper">
 								<img src="img/social-account.png"/>
@@ -106,10 +112,10 @@
 						</label>
 					</section>
 					<section>
-						<form>
+						
 							<h2>Upload your documents <span>(Doc, Docx, Text, PDF, Markdown)</span></h2>
 							<label class="new-file">
-								<input required hidden type="file" value="new-file"/>
+								<input required type="file" value="new-file"/>
 								<div class="new-file-wrapper">
 									<p><i class="fa fa-cloud-upload" aria-hidden="true"></i>Upload a new file</p>
 								</div>
@@ -183,7 +189,7 @@
 							<div class="desired-tone-wrapper">
 								<h2>Select your desired tone</h2>
 								<label class="select-type">
-									<input required hidden type="radio" name="tone" value="documents"/>
+									<input required type="radio" name="tone" value="documents"/>
 									<div class="border-block">
 										<div class="select-wrapper desire-ton-block">
 										<i class="fa fa-comments" aria-hidden="true"></i>
@@ -192,7 +198,7 @@
 									</div>
 								</label>
 								<label class="select-type">
-									<input required hidden type="radio" name="tone" value="documents"/>
+									<input required type="radio" name="tone" value="documents"/>
 									<div class="border-block">
 										<div class="select-wrapper desire-ton-block">
 										<i class="fa fa-suitcase" aria-hidden="true"></i>
@@ -201,7 +207,7 @@
 									</div>
 								</label>
 								<label class="select-type">
-									<input required hidden type="radio" name="tone" value="documents"/>
+									<input required type="radio" name="tone" value="documents"/>
 									<div class="border-block">
 										<div class="select-wrapper desire-ton-block">
 										<i class="fa fa-bullhorn" aria-hidden="true"></i>
@@ -250,7 +256,7 @@
 								</div>
 								<div class="payment-method-container">
 									<label class="select-type">
-										<input required hidden type="radio" name="payment" value="website"/>
+										<input required type="radio" name="payment" value="visa-mastercard"/>
 										<div class="border-block">
 										<div class="select-wrapper payment-wrapper">
 											<img src="img/visa-mastercard.png"/>
@@ -259,7 +265,7 @@
 										</div>
 									</label>
 									<label class="select-type">
-										<input required hidden type="radio" name="payment" value="documents"/>
+										<input required type="radio" name="payment" value="paypal"/>
 										<div class="border-block">
 										<div class="select-wrapper payment-wrapper">
 											<img src="img/paypal.png"/>
@@ -268,7 +274,7 @@
 										</div>
 									</label>
 									<label class="select-type">
-										<input required hidden type="radio" name="payment" value="social-account"/>
+										<input required type="radio" name="payment" value="amazon"/>
 										<div class="border-block">
 										<div class="select-wrapper payment-wrapper">
 											<img src="img/amazon.png"/>
@@ -301,7 +307,7 @@
 								  <a href="#">Terms &amp; Conditions</a>
 								</label>
 								
-									<button class="place-order-button">
+									<button class="place-order-button" type="submit">
 										<p>place order</p>
 									</button>
 									<button class="print-button">
