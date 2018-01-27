@@ -70,11 +70,13 @@
 							<address>
 								<a href="tel:+9710555555">+971 (0) 555 555</a>
 								<a href="mailto:help@qtest.com">help@qtest.com</a>
-							<address>
+							</address>
 						</div>
 					</section>
 					<section class="translate-wrapper">
-						<h1>select what you want to translate</h1>
+						<h1>
+							<span>select what you want to translate</span>
+						</h1>
 						<label class="select-type">
 							<input required hidden type="radio" name="var" value="website"/>
 							<div class="border-block">
@@ -85,7 +87,7 @@
 							</div>
 						</label>
 						<label class="select-type">
-							<input required hidden type="radio" name="var" value="website"/>
+							<input required hidden type="radio" name="var" value="documents"/>
 							<div class="border-block">
 							<div class="select-wrapper">
 								<img src="img/documents.png"/>
@@ -94,7 +96,7 @@
 							</div>
 						</label>
 						<label class="select-type">
-							<input required hidden type="radio" name="var" value="website"/>
+							<input required hidden type="radio" name="var" value="social-account"/>
 							<div class="border-block">
 							<div class="select-wrapper">
 								<img src="img/social-account.png"/>
@@ -102,9 +104,216 @@
 							</div>
 							</div>
 						</label>
+					</section>
+					<section>
+						<form>
+							<h2>Upload your documents <span>(Doc, Docx, Text, PDF, Markdown)</span></h2>
+							<label class="new-file">
+								<input required hidden type="file" value="new-file"/>
+								<div class="new-file-wrapper">
+									<p><i class="fa fa-cloud-upload" aria-hidden="true"></i>Upload a new file</p>
+								</div>
+							</label>
+							<div class="uploaded-files-wrapper">
+								<ul>
+									<li>file name
+										<ul class="list-item">
+											<li><p><i class="fa fa-file-text" aria-hidden="true"></i>business_operations.docx</p></li>
+											<li><p><i class="fa fa-file-text" aria-hidden="true"></i>business_financial.docx</p></li>
+										</ul>
+									</li>
+									<li>file size
+										<ul class="list-item">
+											<li><p>78kb</p></li>
+											<li><p>26kb</p></li>
+										</ul>
+									</li>
+									<li>number of words
+										<ul class="list-item">
+											<li><p>842</p></li>
+											<li><p>2,326</p></li>
+										</ul>
+									</li>
+									<li>remove
+										<ul class="list-item">
+											<li><p><i class="fa fa-trash" aria-hidden="true"></i></p></li>
+											<li><p><i class="fa fa-trash" aria-hidden="true"></i></p></li>
+										</ul>
+									</li>	
+								</ul>
+							</div>
+							<h2>Choose your languages pairing</h2>
+							<div class="languages-from-wrapper">
+								<p>from</p>
+								<div class="select-languages-wrapper">
+									<select class="select-language-from">
+										<option value="English">English</option>
+										<option value="Italian">Italian</option>
+										<option value="Russian">Russian</option>
+									</select>
+								</div>
+							</div>
+							<div class="languages-to-wrapper">
+								<p>to</p>
+								<div class="select-languages-wrapper">
+									<select class="select-language-from">
+										<option value="Arabic">Arabic</option>
+										<option value="English">English</option>
+										<option value="Italian">Italian</option>
+										<option value="Russian">Russian</option>
+									</select>
+								</div>
+								<div class="select-extra-languages-wrapper">
+									<select class="select-language-from">
+										<option value="Kurdish">Kurdish</option>
+										<option value="English">English</option>
+										<option value="Italian">Italian</option>
+										<option value="Russian">Russian</option>
+									</select>
+									<i class="fa fa-trash" aria-hidden="true"></i>
+								</div>
+								<div class="add-more-languages-button-wrapper">
+									<button class="add-more-languages-button">
+										<i class="fa fa-plus" aria-hidden="true"></i>
+										Add
+									</button>
+								</div>
+							</div>
+							
+							<div class="desired-tone-wrapper">
+								<h2>Select your desired tone</h2>
+								<label class="select-type">
+									<input required hidden type="radio" name="tone" value="documents"/>
+									<div class="border-block">
+										<div class="select-wrapper desire-ton-block">
+										<i class="fa fa-comments" aria-hidden="true"></i>
+										<span>Friendy / Casual</span>
+										</div>
+									</div>
+								</label>
+								<label class="select-type">
+									<input required hidden type="radio" name="tone" value="documents"/>
+									<div class="border-block">
+										<div class="select-wrapper desire-ton-block">
+										<i class="fa fa-suitcase" aria-hidden="true"></i>
+										<span>Corporate / Pro</span>
+										</div>
+									</div>
+								</label>
+								<label class="select-type">
+									<input required hidden type="radio" name="tone" value="documents"/>
+									<div class="border-block">
+										<div class="select-wrapper desire-ton-block">
+										<i class="fa fa-bullhorn" aria-hidden="true"></i>
+										<span>Media / Formal</span>
+										</div>
+									</div>
+								</label>
+								
+							</div>							
+							<div class="range-wrapper">
+								<h2>Tell us how urgent this job</h2>
+								<div class="input-wrapper">
+									<input type="range" min="0" max="2">
+									<ul class="range-var">
+										<li>i got time</li>
+										<li class="color">average</li>
+										<li>yesterday</li>
+									</ul>
+								</div>
+								<legend>
+									<h4>timeline info</h4>
+									<p>With an <span>average</span> timeline set up, our expert translator can take a reasonable amount of time perfecting your translation</p>
+								</legend>
+							</div>
+							<div class="payment-wrapper">
+								<h2>Sing up and choose a payment method</h2>
+								<p>Already have an account with us? <a href="#">Sing in</a>.</p>
+								<div class="payment-input-container">
+									<div class="payment-input-wrapper">
+										<label for="name">full name</label>
+										<input type="text" name="name" required id="name" minlength="2" pattern="^[a-zA-Z\s\.\-]*$">
+										<label for="name"></label>
+									</div>
+								</div>
+								<div class="payment-input-container">
+									<div class="payment-input-wrapper">
+										<label for="email">email address</label>
+										<input type="email" name="email" required id="email">
+										<label for="email"></label>
+									</div>
+									<div class="payment-input-wrapper">
+										<label for="password">choose a password</label>
+										<input type="password" name="password" required id="password" minlength="7">
+										<label for="password"></label>
+									</div>
+								</div>
+								<div class="payment-method-container">
+									<label class="select-type">
+										<input required hidden type="radio" name="payment" value="website"/>
+										<div class="border-block">
+										<div class="select-wrapper payment-wrapper">
+											<img src="img/visa-mastercard.png"/>
+											
+										</div>
+										</div>
+									</label>
+									<label class="select-type">
+										<input required hidden type="radio" name="payment" value="documents"/>
+										<div class="border-block">
+										<div class="select-wrapper payment-wrapper">
+											<img src="img/paypal.png"/>
+											
+										</div>
+										</div>
+									</label>
+									<label class="select-type">
+										<input required hidden type="radio" name="payment" value="social-account"/>
+										<div class="border-block">
+										<div class="select-wrapper payment-wrapper">
+											<img src="img/amazon.png"/>
+											
+										</div>
+										</div>
+									</label>
+									<div class="payment-method-info-container">
+										<div class="payment-input-wrapper card-number">
+											<label for="card-number">card number</label>
+											<input type="text" name="card-number" required id="card-number" pattern="[0-9]{13,16}" maxlength="16">
+											<label for="card-number"></label>
+										</div>
+										<div class="payment-input-wrapper">
+											<label for="expiry-date">expiry date</label>
+											<input type="text" name="expiry-date" required id="expiry-date" minlength="6" maxlength="6" placeholder="DD / MM / YY">
+											
+										</div>
+										<div class="payment-input-wrapper">
+											<label for="cvv-password">code</label>
+											<input type="password" name="cvv-password" required id="cvv-password" minlength="3" maxlength="3">
+											
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="confirm-container">
+								<input type="checkbox" id="terms-conditions" required>
+								<label for="terms-conditions">I agree to the
+								  <a href="#">Terms &amp; Conditions</a>
+								</label>
+								
+									<button class="place-order-button">
+										<p>place order</p>
+									</button>
+									<button class="print-button">
+										<p>print a quate</p>
+									</button>
+								
+							</div>
+						</form>
+						
 					</section>	
 				</main>
 			</div>
 		</div>
 	</body>
-<html>
+</html>
