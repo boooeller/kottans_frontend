@@ -6,9 +6,9 @@
 		<link rel="stylesheet" href="css/reset.css">
 		<link rel="stylesheet" href="css/style.css">
 		<!--<link rel="stylesheet" type="text/css" href="css/normalize.css" />-->
-		<link rel="stylesheet" type="text/css" href="css/vicons-font.css" />
+		<!--<link rel="stylesheet" type="text/css" href="css/vicons-font.css" />-->
 		<!--<link rel="stylesheet" type="text/css" href="css/base.css" />-->
-		<link rel="stylesheet" type="text/css" href="css/buttons.css" />
+		<!--<link rel="stylesheet" type="text/css" href="css/buttons.css" />-->
 		
 		<link href="https://cdn.dribbble.com/assets/favicon-63b2904a073c89b52b19aa08cebc16a154bcf83fee8ecc6439968b1e6db569c7.ico" rel="icon">
 		<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
@@ -18,12 +18,14 @@
 		<div class="wrapper">
 			<div class="container">
 				<header>
-					<button class="backward">
-						<p><i class="fa fa-long-arrow-left" aria-hidden="true"></i>go back</p>
+					<button class="backward button header-button-hover-style">
+						<i class="fa fa-long-arrow-left" aria-hidden="true"></i>
+						go back
 					</button>
-					<a href="#" class="logo"><img src="img/logo.png" alt="logo"/></a>
-					<button class="login">
-						<p><i class="fa fa-user" aria-hidden="true"></i>sing in</p>
+					<a href="#" class="logo"></a>
+					<button class="login button header-button-hover-style">
+						<i class="fa fa-user" aria-hidden="true"></i>
+						sing in						
 					</button>
 				</header>
 				<main>
@@ -58,11 +60,11 @@
 								</ul>
 							</div>
 							<div class="order-buttons">
-								<button class="place-order-button button button--wayra button--border-thick button--text-upper button--size-s" type="submit">
-									<p>place order</p>
+								<button class="button-hover-style-background place-order-button button" type="submit" form="data">
+									place order
 								</button>
-								<button class="print-button button button--wayra button--border-thick button--text-upper button--size-s">
-									<p>print a quate</p>
+								<button class="button-hover-style-background print-button button" form="data">
+									print a quate
 								</button>
 							</div>
 						</div>
@@ -78,44 +80,43 @@
 							</address>
 						</div>
 					</section>
-					<form>
-					<section class="translate-wrapper">
-						<h1>
-							<span>select what you want to translate</span>
-						</h1>
-						<label class="select-type">
-							<input required type="radio" name="var" value="website"/>
-							<div class="border-block">
-							<div class="select-wrapper">
-								<img src="img/website.png"/>
-								<p>Website</p>
-							</div>
-							</div>
-						</label>
-						<label class="select-type">
-							<input required type="radio" name="var" value="documents"/>
-							<div class="border-block">
-							<div class="select-wrapper">
-								<img src="img/documents.png"/>
-								<p>Documents</p>
-							</div>
-							</div>
-						</label>
-						<label class="select-type">
-							<input required type="radio" name="var" value="social-account"/>
-							<div class="border-block">
-							<div class="select-wrapper">
-								<img src="img/social-account.png"/>
-								<p>Social Account</p>
-							</div>
-							</div>
-						</label>
-					</section>
-					<section>
-						
+					<form id="data" action="#">
+						<section class="translate-wrapper">
+							<h1>
+								<span>select what you want to translate</span>
+							</h1>
+							<label class="select-type">
+								<input required type="radio" name="var" value="website"/>
+								<div class="border-block">
+								<div class="select-wrapper">
+									<img src="img/website.png" alt="website"/>
+									<p>Website</p>
+								</div>
+								</div>
+							</label>
+							<label class="select-type">
+								<input required type="radio" name="var" value="documents"/>
+								<div class="border-block">
+								<div class="select-wrapper">
+									<img src="img/documents.png" alt="documents"/>
+									<p>Documents</p>
+								</div>
+								</div>
+							</label>
+							<label class="select-type">
+								<input required type="radio" name="var" value="social-account"/>
+								<div class="border-block">
+								<div class="select-wrapper">
+									<img src="img/social-account.png" alt="social-account"/>
+									<p>Social Account</p>
+								</div>
+								</div>
+							</label>
+						</section>
+						<section>	
 							<h2>Upload your documents <span>(Doc, Docx, Text, PDF, Markdown)</span></h2>
 							<label class="new-file">
-								<input required type="file" value="new-file"/>
+								<input required type="file"/>
 								<div class="new-file-wrapper">
 									<p><i class="fa fa-cloud-upload" aria-hidden="true"></i>Upload a new file</p>
 								</div>
@@ -148,6 +149,8 @@
 									</li>	
 								</ul>
 							</div>
+						</section>
+						<section>		
 							<h2>Choose your languages pairing</h2>
 							<div class="languages-from-wrapper">
 								<p>from</p>
@@ -185,8 +188,9 @@
 									</button>
 								</div>
 							</div>
-							
-							<div class="desired-tone-wrapper">
+						</section>	
+						<section>
+							<aside class="desired-tone-wrapper">
 								<h2>Select your desired tone</h2>
 								<label class="select-type">
 									<input required type="radio" name="tone" value="documents"/>
@@ -214,11 +218,11 @@
 										<span>Media / Formal</span>
 										</div>
 									</div>
-								</label>
-								
-							</div>							
-							<div class="range-wrapper">
+								</label>					
+							</aside>							
+							<aside class="range-wrapper">
 								<h2>Tell us how urgent this job</h2>
+								
 								<div class="input-wrapper">
 									<input type="range" min="0" max="2">
 									<ul class="range-var">
@@ -231,95 +235,147 @@
 									<h4>timeline info</h4>
 									<p>With an <span>average</span> timeline set up, our expert translator can take a reasonable amount of time perfecting your translation</p>
 								</legend>
-							</div>
-							<div class="payment-wrapper">
-								<h2>Sing up and choose a payment method</h2>
-								<p>Already have an account with us? <a href="#">Sing in</a>.</p>
-								<div class="payment-input-container">
-									<div class="payment-input-wrapper">
-										<label for="name">full name</label>
-										<input type="text" name="name" required id="name" minlength="2" pattern="^[a-zA-Z\s\.\-]*$">
-										<label for="name"></label>
-									</div>
-								</div>
-								<div class="payment-input-container">
-									<div class="payment-input-wrapper">
-										<label for="email">email address</label>
-										<input type="email" name="email" required id="email">
-										<label for="email"></label>
-									</div>
-									<div class="payment-input-wrapper">
-										<label for="password">choose a password</label>
-										<input type="password" name="password" required id="password" minlength="7">
-										<label for="password"></label>
-									</div>
-								</div>
-								<div class="payment-method-container">
-									<label class="select-type">
-										<input required type="radio" name="payment" value="visa-mastercard"/>
-										<div class="border-block">
-										<div class="select-wrapper payment-wrapper">
-											<img src="img/visa-mastercard.png"/>
-											
-										</div>
-										</div>
-									</label>
-									<label class="select-type">
-										<input required type="radio" name="payment" value="paypal"/>
-										<div class="border-block">
-										<div class="select-wrapper payment-wrapper">
-											<img src="img/paypal.png"/>
-											
-										</div>
-										</div>
-									</label>
-									<label class="select-type">
-										<input required type="radio" name="payment" value="amazon"/>
-										<div class="border-block">
-										<div class="select-wrapper payment-wrapper">
-											<img src="img/amazon.png"/>
-											
-										</div>
-										</div>
-									</label>
-									<div class="payment-method-info-container">
-										<div class="payment-input-wrapper card-number">
-											<label for="card-number">card number</label>
-											<input type="text" name="card-number" required id="card-number" pattern="[0-9]{13,16}" maxlength="16">
-											<label for="card-number"></label>
-										</div>
-										<div class="payment-input-wrapper">
-											<label for="expiry-date">expiry date</label>
-											<input type="text" name="expiry-date" required id="expiry-date" minlength="6" maxlength="6" placeholder="DD / MM / YY">
-											
-										</div>
-										<div class="payment-input-wrapper">
-											<label for="cvv-password">code</label>
-											<input type="password" name="cvv-password" required id="cvv-password" minlength="3" maxlength="3">
-											
-										</div>
-									</div>
+							</aside>
+						</section>
+						<section class="payment-wrapper">
+							<h2>Sing up and choose a payment method</h2>
+							<p>Already have an account with us? 
+								<a href="#">Sing in</a>.
+							</p>
+							<div class="payment-input-container">
+								<div class="payment-input-wrapper">
+									<label for="name">full name</label>
+									<input type="text" name="name" required id="name" minlength="2" pattern="^[a-zA-Z\s\.\-]*$">
+									<label for="name"></label>
 								</div>
 							</div>
-							<div class="confirm-container">
-								<input type="checkbox" id="terms-conditions" required>
-								<label for="terms-conditions">I agree to the
-								  <a href="#">Terms &amp; Conditions</a>
+							<div class="payment-input-container">
+								<div class="payment-input-wrapper">
+									<label for="email">email address</label>
+									<input type="email" name="email" required id="email">
+									<label for="email"></label>
+								</div>
+								<div class="payment-input-wrapper">
+									<label for="password">choose a password</label>
+									<input type="password" name="password" required id="password" minlength="7">
+									<label for="password"></label>
+								</div>
+							</div>
+							<div class="payment-method-container">
+								<label class="select-type">
+									<input required type="radio" name="payment" value="visa-mastercard"/>
+									<div class="border-block">
+									<div class="select-wrapper payment-wrapper">
+										<img src="img/visa-mastercard.png" alt="visa-mastercard"/>								
+									</div>
+									</div>
 								</label>
-								
-									<button class="place-order-button" type="submit">
-										<p>place order</p>
-									</button>
-									<button class="print-button">
-										<p>print a quate</p>
-									</button>
-								
+								<label class="select-type">
+									<input required type="radio" name="payment" value="paypal"/>
+									<div class="border-block">
+									<div class="select-wrapper payment-wrapper">
+										<img src="img/paypal.png" alt="paypal"/>										
+									</div>
+									</div>
+								</label>
+								<label class="select-type">
+									<input required type="radio" name="payment" value="amazon"/>
+									<div class="border-block">
+									<div class="select-wrapper payment-wrapper">
+										<img src="img/amazon.png" alt="amazon"/>										
+									</div>
+									</div>
+								</label>
+								<div class="payment-method-info-container">
+									<div class="payment-input-wrapper card-number">
+										<label for="card-number">card number</label>
+										<input type="text" name="card-number" required id="card-number" pattern="[0-9]{13,16}" maxlength="16">
+										<label for="card-number"></label>
+									</div>
+									<div class="payment-input-wrapper">
+										<label for="expiry-date">expiry date</label>
+										<input type="text" name="expiry-date" required id="expiry-date" minlength="6" maxlength="6" placeholder="DD / MM / YY">
+										
+									</div>
+									<div class="payment-input-wrapper">
+										<label for="cvv-password">code</label>
+										<input type="password" name="cvv-password" required id="cvv-password" minlength="3" maxlength="3">
+										
+									</div>
+								</div>
 							</div>
-						</form>
-						
-					</section>	
-				</main>
+						</section>
+						<section class="confirm-container">
+							<input type="checkbox" id="terms-conditions" required>
+							<label for="terms-conditions">I agree to the
+							  <a href="#">Terms &amp; Conditions</a>
+							</label>
+							
+								<button class="button-hover-style-background place-order-button button" type="submit">
+									place order
+								</button>
+								<button class="button-hover-style-background print-button button">
+									print a quate
+								</button>								
+						</section>
+					</form>			
+				</main>				
 			</div>
+			<footer class="clearfix">
+				<section class="info">
+					<h5 class="title">
+					  <i class="fa fa-heart-o" aria-hidden="true"></i>
+					  What we do
+					</h5>
+					<p>
+					  <em>
+						We provide a full range of language services including content development, document, website and social media accounts translations.
+					  </em>
+					</p>
+				</section>
+				<section class="address">
+					<h5 class="title">
+					  <i class="fa fa-compass" aria-hidden="true"></i>
+					  Our main office
+					</h5>
+					<address>
+					  <p>Dubai, UAE</p>
+					  <p>P.O. Box: 502735</p>
+					  <a href="tel:+971(0)44278128">Phone: +971(0) 44278128</a>
+					</address>
+				</section>
+				<section class="social">
+					<h5 class="title">
+					  <i class="fa fa-share-alt" aria-hidden="true"></i>
+					  Connect with us
+					</h5>
+					<nav>
+					  <ul>
+						<li>
+						  <a href="#">
+							<i class="fa fa-facebook-square" aria-hidden="true"></i>
+							Facebook
+						  </a>
+						</li>
+						<li>
+						  <a href="#">
+							<i class="fa fa-twitter-square" aria-hidden="true"></i>
+							Twitter
+						  </a>
+						</li>
+						<li>
+						  <a href="#">
+							<i class="fa fa-linkedin-square" aria-hidden="true"></i>
+							Linkedin
+						  </a>
+						</li>
+					  </ul>
+					</nav>
+				</section>
+				<a href="#" class="logo">
+					
+				</a>
+			</footer>
 		</div>
 	</body>
 </html>
