@@ -5,11 +5,6 @@
 		<title>Task-11</title>
 		<link rel="stylesheet" href="css/reset.css">
 		<link rel="stylesheet" href="css/style.css">
-		<!--<link rel="stylesheet" type="text/css" href="css/normalize.css" />-->
-		<!--<link rel="stylesheet" type="text/css" href="css/vicons-font.css" />-->
-		<!--<link rel="stylesheet" type="text/css" href="css/base.css" />-->
-		<!--<link rel="stylesheet" type="text/css" href="css/buttons.css" />-->
-		
 		<link href="https://cdn.dribbble.com/assets/favicon-63b2904a073c89b52b19aa08cebc16a154bcf83fee8ecc6439968b1e6db569c7.ico" rel="icon">
 		<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
 		<script src="https://use.fontawesome.com/15a4f15d9a.js"></script>
@@ -18,12 +13,12 @@
 		<div class="wrapper">
 			<div class="container">
 				<header>
-					<button class="backward button header-button-hover-style">
+					<button class="backward header-button-hover-style">
 						<i class="fa fa-long-arrow-left" aria-hidden="true"></i>
 						go back
 					</button>
 					<a href="#" class="logo"></a>
-					<button class="login button header-button-hover-style">
+					<button class="login header-button-hover-style">
 						<i class="fa fa-user" aria-hidden="true"></i>
 						sing in						
 					</button>
@@ -63,7 +58,7 @@
 								<button class="button-hover-style-background place-order-button button" type="submit" form="data">
 									place order
 								</button>
-								<button class="button-hover-style-background print-button button" form="data">
+								<button class="button-hover-style-background print-button button" onclick="window.print()" form="data">
 									print a quate
 								</button>
 							</div>
@@ -85,144 +80,148 @@
 							<h1>
 								<span>select what you want to translate</span>
 							</h1>
-							<label class="select-type">
-								<input required type="radio" name="var" value="website"/>
-								<div class="border-block">
-								<div class="select-wrapper">
-									<img src="img/website.png" alt="website"/>
-									<p>Website</p>
+							<fieldset>
+								<div class="select-type">
+									<input required type="radio" name="var" value="website" id="website"/>
+									<label for="website" class="translane-doc-type-label select-wrapper">				
+										<img src="img/website.png" alt="website"/>
+										<span>Website</span>
+									</label>						
 								</div>
+								<div class="select-type">
+									<input required type="radio" name="var" value="website" id="documents"/>
+									<label for="documents" class="translane-doc-type-label select-wrapper">				
+										<img src="img/documents.png" alt="documents"/>
+										<span>Documents</span>
+									</label>						
 								</div>
-							</label>
-							<label class="select-type">
-								<input required type="radio" name="var" value="documents"/>
-								<div class="border-block">
-								<div class="select-wrapper">
-									<img src="img/documents.png" alt="documents"/>
-									<p>Documents</p>
+								<div class="select-type">
+									<input required type="radio" name="var" value="website" id="social-account"/>
+									<label for="social-account" class="translane-doc-type-label select-wrapper">				
+										<img src="img/social-account.png" alt="social-account"/>
+										<span>Social Account</span>
+									</label>						
 								</div>
-								</div>
-							</label>
-							<label class="select-type">
-								<input required type="radio" name="var" value="social-account"/>
-								<div class="border-block">
-								<div class="select-wrapper">
-									<img src="img/social-account.png" alt="social-account"/>
-									<p>Social Account</p>
-								</div>
-								</div>
-							</label>
+							</fieldset>	
 						</section>
 						<section>	
 							<h2>Upload your documents <span>(Doc, Docx, Text, PDF, Markdown)</span></h2>
-							<label class="new-file">
-								<input required type="file"/>
-								<div class="new-file-wrapper">
-									<p><i class="fa fa-cloud-upload" aria-hidden="true"></i>Upload a new file</p>
-								</div>
-							</label>
-							<div class="uploaded-files-wrapper">
-								<ul>
-									<li>file name
-										<ul class="list-item">
-											<li><p><i class="fa fa-file-text" aria-hidden="true"></i>business_operations.docx</p></li>
-											<li><p><i class="fa fa-file-text" aria-hidden="true"></i>business_financial.docx</p></li>
-										</ul>
-									</li>
-									<li>file size
-										<ul class="list-item">
-											<li><p>78kb</p></li>
-											<li><p>26kb</p></li>
-										</ul>
-									</li>
-									<li>number of words
-										<ul class="list-item">
-											<li><p>842</p></li>
-											<li><p>2,326</p></li>
-										</ul>
-									</li>
-									<li>remove
-										<ul class="list-item">
-											<li><p><i class="fa fa-trash" aria-hidden="true"></i></p></li>
-											<li><p><i class="fa fa-trash" aria-hidden="true"></i></p></li>
-										</ul>
-									</li>	
-								</ul>
-							</div>
+							<input type="file" accept=".doc, .docx, .txt, .pdf, .md" id="upload">
+						    <label for="upload" class="upload-button">
+							<i class="fa fa-cloud-upload" aria-hidden="true"></i> Upload a new file
+						    </label>
+
+						  <table class="files-table">
+							<thead>
+							  <tr>
+								<th>File name</th>
+								<th>File size</th>
+								<th>Number of words</th>
+								<th>Remove</th>
+							  </tr>
+							</thead>
+							<tbody>
+							  <tr>
+								<td>
+								  <i class="fa fa-file-text" aria-hidden="true"></i>
+								  business_operations.docx
+								</td>
+								<td>78kb</td>
+								<td>842</td>
+								<td>
+								  <button type="button" class="remove-button" aria-label="Remove">
+									<i class="fa fa-trash" aria-hidden="true"></i>
+								  </button>
+								</td>
+							  </tr>
+							  <tr>
+								<td>
+								  <i class="fa fa-file-text" aria-hidden="true"></i>
+								  business_financial.docx
+								</td>
+								<td>26kb</td>
+								<td>2,326</td>
+								<td>
+								  <button type="button" class="remove-button" aria-label="Remove">
+									<i class="fa fa-trash" aria-hidden="true"></i>
+								  </button>
+								</td>
+							  </tr>
+							</tbody>
+						  </table>						
 						</section>
 						<section>		
 							<h2>Choose your languages pairing</h2>
-							<div class="languages-from-wrapper">
-								<p>from</p>
-								<div class="select-languages-wrapper">
-									<select class="select-language-from">
-										<option value="English">English</option>
-										<option value="Italian">Italian</option>
-										<option value="Russian">Russian</option>
-									</select>
+							<fieldset>
+								<div class="languages-from-wrapper">
+									<p>from</p>
+									<div class="select-languages-wrapper">
+										<select class="select-language-from">
+											<option value="English">English</option>
+											<option value="Italian">Italian</option>
+											<option value="Russian">Russian</option>
+										</select>
+									</div>
 								</div>
-							</div>
-							<div class="languages-to-wrapper">
-								<p>to</p>
-								<div class="select-languages-wrapper">
-									<select class="select-language-from">
-										<option value="Arabic">Arabic</option>
-										<option value="English">English</option>
-										<option value="Italian">Italian</option>
-										<option value="Russian">Russian</option>
-									</select>
+							</fieldset>
+							<fieldset>
+								<div class="languages-to-wrapper">
+									<p>to</p>
+									<div class="select-languages-wrapper">
+										<select class="select-language-from">
+											<option value="Arabic">Arabic</option>
+											<option value="English">English</option>
+											<option value="Italian">Italian</option>
+											<option value="Russian">Russian</option>
+										</select>
+									</div>
+									<div class="select-extra-languages-wrapper">
+										<select class="select-language-from">
+											<option value="Kurdish">Kurdish</option>
+											<option value="English">English</option>
+											<option value="Italian">Italian</option>
+											<option value="Russian">Russian</option>
+										</select>
+										<i class="fa fa-trash" aria-hidden="true"></i>
+									</div>
+									<div class="add-more-languages-button-wrapper">
+										<button class="add-more-languages-button">
+											<i class="fa fa-plus" aria-hidden="true"></i>
+											Add
+										</button>
+									</div>
 								</div>
-								<div class="select-extra-languages-wrapper">
-									<select class="select-language-from">
-										<option value="Kurdish">Kurdish</option>
-										<option value="English">English</option>
-										<option value="Italian">Italian</option>
-										<option value="Russian">Russian</option>
-									</select>
-									<i class="fa fa-trash" aria-hidden="true"></i>
-								</div>
-								<div class="add-more-languages-button-wrapper">
-									<button class="add-more-languages-button">
-										<i class="fa fa-plus" aria-hidden="true"></i>
-										Add
-									</button>
-								</div>
-							</div>
+							</fieldset>
 						</section>	
 						<section>
 							<aside class="desired-tone-wrapper">
 								<h2>Select your desired tone</h2>
-								<label class="select-type">
-									<input required type="radio" name="tone" value="documents"/>
-									<div class="border-block">
-										<div class="select-wrapper desire-ton-block">
-										<i class="fa fa-comments" aria-hidden="true"></i>
-										<span>Friendy / Casual</span>
-										</div>
+								<fieldset>
+									<div class="select-type">
+										<input required type="radio" name="tone" value="documents" id="friendy-casual"/>
+										<label for="friendy-casual" class="select-wrapper desire-ton-block">								
+											<i class="fa fa-comments" aria-hidden="true"></i>
+											<span>Friendy / Casual</span>
+										</label>		
 									</div>
-								</label>
-								<label class="select-type">
-									<input required type="radio" name="tone" value="documents"/>
-									<div class="border-block">
-										<div class="select-wrapper desire-ton-block">
-										<i class="fa fa-suitcase" aria-hidden="true"></i>
-										<span>Corporate / Pro</span>
-										</div>
+									<div class="select-type">
+										<input required type="radio" name="tone" value="documents" id="corporate-pro"/>
+										<label for="corporate-pro" class="select-wrapper desire-ton-block">								
+											<i class="fa fa-suitcase" aria-hidden="true"></i>
+											<span>Corporate / Pro</span>	
+										</label>
 									</div>
-								</label>
-								<label class="select-type">
-									<input required type="radio" name="tone" value="documents"/>
-									<div class="border-block">
-										<div class="select-wrapper desire-ton-block">
-										<i class="fa fa-bullhorn" aria-hidden="true"></i>
-										<span>Media / Formal</span>
-										</div>
-									</div>
-								</label>					
+									<div class="select-type">
+										<input required type="radio" name="tone" value="documents" id="media-formal"/>
+										<label for="media-formal" class="select-wrapper desire-ton-block">								
+											<i class="fa fa-bullhorn" aria-hidden="true"></i>
+											<span>Media / Formal</span>	
+										</label>
+									</div>	
+								</fieldset>			
 							</aside>							
 							<aside class="range-wrapper">
-								<h2>Tell us how urgent this job</h2>
-								
+								<h2>Tell us how urgent this job</h2>								
 								<div class="input-wrapper">
 									<input type="range" min="0" max="2">
 									<ul class="range-var">
@@ -262,30 +261,26 @@
 								</div>
 							</div>
 							<div class="payment-method-container">
-								<label class="select-type">
-									<input required type="radio" name="payment" value="visa-mastercard"/>
-									<div class="border-block">
-									<div class="select-wrapper payment-wrapper">
-										<img src="img/visa-mastercard.png" alt="visa-mastercard"/>								
+								<fieldset>
+									<div class="select-type">
+										<input required type="radio" name="payment" value="visa-mastercard" id="visa-mastercard"/>
+										<label for="visa-mastercard" class="select-wrapper payment-wrapper">
+											<img src="img/visa-mastercard.png" alt="visa-mastercard"/>								
+										</label>
 									</div>
+									<div class="select-type">
+										<input required type="radio" name="payment" value="visa-mastercard" id="paypal"/>
+										<label for="paypal" class="select-wrapper payment-wrapper">
+											<img src="img/paypal.png" alt="paypal"/>							
+										</label>
 									</div>
-								</label>
-								<label class="select-type">
-									<input required type="radio" name="payment" value="paypal"/>
-									<div class="border-block">
-									<div class="select-wrapper payment-wrapper">
-										<img src="img/paypal.png" alt="paypal"/>										
+									<div class="select-type">
+										<input required type="radio" name="payment" value="visa-mastercard" id="amazon"/>
+										<label for="amazon" class="select-wrapper payment-wrapper">
+											<img src="img/amazon.png" alt="amazon"/>								
+										</label>
 									</div>
-									</div>
-								</label>
-								<label class="select-type">
-									<input required type="radio" name="payment" value="amazon"/>
-									<div class="border-block">
-									<div class="select-wrapper payment-wrapper">
-										<img src="img/amazon.png" alt="amazon"/>										
-									</div>
-									</div>
-								</label>
+								</fieldset>
 								<div class="payment-method-info-container">
 									<div class="payment-input-wrapper card-number">
 										<label for="card-number">card number</label>
@@ -309,14 +304,13 @@
 							<input type="checkbox" id="terms-conditions" required>
 							<label for="terms-conditions">I agree to the
 							  <a href="#">Terms &amp; Conditions</a>
-							</label>
-							
-								<button class="button-hover-style-background place-order-button button" type="submit">
-									place order
-								</button>
-								<button class="button-hover-style-background print-button button">
-									print a quate
-								</button>								
+							</label>							
+							<button class="button-hover-style-background place-order-button button" type="submit">
+								place order
+							</button>
+							<button class="button-hover-style-background print-button button" onclick="window.print()">
+								print a quate
+							</button>								
 						</section>
 					</form>			
 				</main>				
@@ -372,9 +366,7 @@
 					  </ul>
 					</nav>
 				</section>
-				<a href="#" class="logo">
-					
-				</a>
+				<a href="#" class="logo"></a>
 			</footer>
 		</div>
 	</body>
